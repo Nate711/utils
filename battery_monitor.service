@@ -1,0 +1,11 @@
+[Unit]
+Description=Battery Monitor Service
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/check_batt_voltage.py --service_mode
+Restart=always
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target
