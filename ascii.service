@@ -1,0 +1,10 @@
+[Unit]
+Description=Display ASCII Art
+
+[Service]
+ExecStart=/home/pi/utils/ascii.sh
+StandardInput=tty
+StandardOutput=tty
+
+[Install]
+WantedBy=getty.target
