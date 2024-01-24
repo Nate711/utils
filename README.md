@@ -1,2 +1,2 @@
-# pupperv3_utils
-Clone and rename to just "utils" and put in home folder
+# Utils
+Utils for pupper v3. Make sure you clone to /home/pi/
