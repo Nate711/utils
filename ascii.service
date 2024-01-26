@@ -1,8 +1,11 @@
 [Unit]
-Description=Display ASCII Art
+Description=Print a message after login
+After=getty@tty1.service
 
 [Service]
 ExecStart=/home/pi/utils/ascii.sh
+Type=oneshot
+RemainAfterExit=yes
 StandardInput=tty
 StandardOutput=tty
 
