@@ -19,7 +19,7 @@ tmux split-window -h
 # Send commands to the first pane
 tmux send-keys -t pupperv3:0.0 "source /opt/ros/humble/setup.bash; source /home/pi/ros2_ws/install/local_setup.bash" C-m
 sleep 1
-tmux send-keys -t pupperv3:0.0 "ros2 launch pi3hat_hardware_interface test_state_publisher.launch.py"
+tmux send-keys -t pupperv3:0.0 "ros2 launch pi_hat_hardware_interface test_state_publisher.launch.py"
 
 # Send commands to the second pane
 tmux send-keys -t pupperv3:0.1 "source /opt/ros/humble/setup.bash; source /home/pi/ros2_ws/install/local_setup.bash" C-m
