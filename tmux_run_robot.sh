@@ -36,6 +36,8 @@ tmux send-keys -t pupperv3:0.2 "ros2 run joy_linux joy_linux_node --ros-args -p 
 # Send commands to the fourth pane
 tmux send-keys -t pupperv3:0.3 "source /opt/ros/humble/setup.bash; source /home/pi/ros2_ws/install/local_setup.bash" C-m
 sleep 1
+tmux send-keys -t pupperv3:0.3 "ros2 run ear_controller expression_control"
+
 
 # Set layout and attach to the session
 tmux select-layout -t pupperv3:0 even-horizontal
