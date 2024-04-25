@@ -1,0 +1,10 @@
+[Unit]
+Description=robot
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi
+ExecStart=/home/pi/utils/robot.sh
+
+[Install]
+WantedBy=multi-user.target
