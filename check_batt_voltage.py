@@ -55,9 +55,9 @@ def main():
     NUM_CELLS = 5
 
     # Data specific to Dewalt battery
-    MIN_VOLTAGE = 3.2 * NUM_CELLS
+    MIN_VOLTAGE = 3.3 * NUM_CELLS
     MAX_VOLTAGE = 4.05 * NUM_CELLS
-    CELL_VOLTAGES = [4.05, 3.6, 3.4, 3.2]
+    CELL_VOLTAGES = [4.05, 3.6, 3.4, 3.3]
     CELL_PERCENTAGES = [100, 66, 33, 0]
 
     bat_voltage = get_battery_voltage(i2c)
