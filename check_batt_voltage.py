@@ -80,14 +80,16 @@ def main():
                 broadcast_message(
                     f"\033[91mWARNING: Battery voltage {bat_voltage:0.2f} is below threshold {MIN_VOLTAGE}!\033[0m"
                 )
-            if bat_voltage < SHUTDOWN_VOLTAGE:
+            # Check if battery voltage is below threshold and above 5V
+            # which indicates that the pi is connected to a wall power source
+            if bat_voltage > 5.0 and bat_voltage < SHUTDOWN_VOLTAGE:
                 broadcast_message(
                     f"\033[91mWARNING: Battery voltage {bat_voltage:0.2f} is below threshold {SHUTDOWN_VOLTAGE}! Scheduling a shutdown for 60 seconds from now...\033[0m"
                 )
                 os.system("sudo shutdown -h +1")
-            
+
             # Check every 10 seconds
-            time.sleep(10) 
+            time.sleep(10)
     else:
         print(f"Battery:\t{int(cell_percentage)}%\t{bat_voltage:0.2f}V")
 
